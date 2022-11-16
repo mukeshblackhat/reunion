@@ -107,7 +107,7 @@ const Content = () => {
           <span className="text-gray-400">location</span>
           <DropDown
             onChange={onCitySelection}
-            controlClassName="relative "
+            menuClassName="bg-gray-400 bg-opacity-25 p-2 rounded border-2"
             options={options}
             placeholder={"select..."}
             className="text-xl absolute font-medium "
@@ -119,7 +119,7 @@ const Content = () => {
           {" "}
           <span className="text-gray-400">when</span>
           <DropDown
-            controlClassName="relative "
+            menuClassName="bg-gray-400 bg-opacity-25 p-2 rounded border-2"
             options={moveInDate}
             placeholder={"select..."}
             className="text-xl absolute font-medium"
@@ -133,7 +133,7 @@ const Content = () => {
           <span className="text-gray-400">price</span>
           <DropDown
             onChange={onPriceSelection}
-            controlClassName="relative "
+            menuClassName="bg-gray-400 bg-opacity-25 p-2 rounded border-2"
             options={rentRange}
             placeholder={"select..."}
             className="text-xl absolute font-medium "
@@ -146,7 +146,7 @@ const Content = () => {
           <span className="text-gray-400">property type</span>
           <DropDown
             onChange={onTypeSelction}
-            controlClassName="relative "
+            menuClassName="bg-gray-400 bg-opacity-25 p-2 rounded border-2"
             options={PropOptions}
             placeholder={"select..."}
             className="text-xl absolute font-medium "
