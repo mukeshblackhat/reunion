@@ -32,16 +32,12 @@ const Content = () => {
   }
 
   React.useEffect(() => {
-    console.log(filter_data)
+   
     const keys = Object.keys(filter_data)
-    console.log(properties)
-    if(filter_data.city||filter_data.type){
-        console.log("hello")
-    }
     const res = Data.filter((d) => {
-        return keys.reduce((prev, key) => { console.log(key)
+        return keys.reduce((prev, key) => { 
           if(key==="type"||key==="city"){
-            console.log(filter_data[key])
+         
            
            return prev && (filter_data[key] ? d[key]?.toLowerCase() === filter_data[key] : true)
           }
@@ -54,13 +50,17 @@ const Content = () => {
           
         }, true)
     })
-    console.log(res)
+
     
    
 
     setProperties(res)
     
   }, [filter_data]);
+
+
+  
+
 
 
   let PropOptions = [...houseType];
@@ -163,9 +163,10 @@ const Content = () => {
       </div>
 
       <div className="flex flex-wrap pt-10 justify-evenly">
-        {properties.map((data) => (
+        {console.log(properties)}
+        {properties.length?(properties.map((data) => (
           <Card key={data.id} data={data} />
-        ))}
+        ))):<h2 className="p-4 font-bold text-xl text-red-500">nothing found....</h2>}
       </div>
     </div>
   );
